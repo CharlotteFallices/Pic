@@ -2,6 +2,7 @@
 #This shell script **CANNOT** work properly in Bash (maybe include zsh, unless add `setopt no_nomatch` to your .zshrc)
 #echo "setopt no_nomatch" > ~/.zshrc && source ~/.zshrc
 
+cd $(dirname $0)
 filename=$(basename $1)
 cp $1 ./${filename}
 git add ./${filename}
