@@ -6,7 +6,7 @@ cd $(dirname $0)
 while test $# -gt 0
 do
 filename=$(basename $1)
-cp $1 ./${filename}
+ln -h $1 ./${filename}
 git add ./${filename}
 git commit -qm "Upload ${filename}"
 git push -q origin master
